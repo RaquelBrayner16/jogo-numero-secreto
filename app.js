@@ -6,9 +6,7 @@ let tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', 
-    {rate:1.2}); //ADICONANDO RESPONSIVE VOICE COLOCNADO PARAMETROS PAR SER LIDO 
-    
+       
 }
 
 function exibirMensagemInicial() {
@@ -40,13 +38,13 @@ function verificarChute() {
 
 function gerarNumeroAleatorio() {
     let numeroEscolhido =  parseInt(Math.random() * numeroLimite + 1);// cobrindo um intervalo menor para teste(entre 0 e 4
-    let quantidadeDeElementosNalista = listaDeNumerosSorteados.length;//verificação quantidad de elementos na lista
+    let quantidadeDeElementosNalista = listaDeNumerosSorteados.length;//verificação quantidade de elementos na lista
     if(listaDeNumerosSorteados.length == numeroLimite) {
         listaDeNumerosSorteados = [];
     }
     
     if (listaDeNumerosSorteados.includes(numeroEscolhido)) { 
-        return gerarNumeroAleatorio (); //verifica se o numeor ja foi escolhido
+        return gerarNumeroAleatorio (); //verifica se o numero ja foi escolhido
     } else { //se não esta na lista..
        listaDeNumerosSorteados.push(numeroEscolhido);
         console.log(listaDeNumerosSorteados);
@@ -77,24 +75,3 @@ function reiniciarJogo() {
 
 
 
-//sobre listas(Array) e acesso a elas.Sempre começa com indice zero na contagem de lista
-//comando para retornar a quantidade de elementos em uma lista: nomelista.length
-
-//criando uma lista de nuemros que ja foram sorteados e não podem ser sorteados novamente 
-
-//Adicionando novos elementos
-
-//Para adicionar um elemento ao final da array, você pode usar o método push.
-//frutas.push("Morango");
-//console.log(frutas); // Saída: ["Maçã", "Uva", "Laranja", "Morango"]
-
-//Para remover o último elemento, você pode usar o método pop.
-
-//frutas.pop();
-//console.log(frutas); // Saída: ["Maçã", "Uva", "Laranja"]
-
-//Criando uma array
-
-//Você pode criar uma array em JavaScript declarando uma variável e atribuindo-lhe valores entre colchetes [].
-
-//let frutas = ["Maçã", "Uva", "Laranja"];
